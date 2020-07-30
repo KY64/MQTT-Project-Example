@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div id="image-bg" class="round-border">
+        <label id="input-label" for="image-source" class="round-border">
+            <i class="material-icons" style="align-self: center;font-size:36pt">add_a_photo</i>
+        </label>
+        <input type="file" id="image-source" style="display: none;" onchange="load_image(event)"/>
+        <img id="image" class="round-border"/>
+    </div>
+    <div class="t-center">
+        <br/>
+        <div>
+            <input type="text" name="name" id="name" placeholder="Insert name" class="t-center"/>
+        </div>
+        <div>
+            <input type="text"
+                   name="contract"
+                   id="contract"
+                   placeholder="Insert contract amount"
+                   class="t-center"
+                   oninput="currency()"
+            />
+        </div>
+        <button id="publish" onclick="publish()">Publish</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+    <script src="src/script.js"></script>
+</body>
+</html>
