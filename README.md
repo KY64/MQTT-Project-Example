@@ -1,1 +1,1 @@
-# MQTT with Javascript
+# MQTT Project Example Using Javascript
