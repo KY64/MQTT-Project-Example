@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Traffic Light</title>
+</head>
+<body>
+    <div id="card">
+        <div id="duration" class="center-content">
+            <div id="outer-background" class="outer-background flex-center round-border bg-greenish">
+                <div id="inner-background" class="inner-background round-border bg-green">
+                    <div class="timer-style light">
+                        <span id="tick">17</span>
+                        <span style="padding-bottom: 12px">seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="switch" class="center-content">
+            <input type="checkbox" name="switch" id="switch-mode" class="switch-style round-border" onchange="switch_mode()">
+        </div>
+        <div id="control">
+            <div id="red-led" class="mini-card">
+                <div class="round-transparent round-border flex-center bg-pinkish">
+                    <div class="round-bold round-border bg-red"></div>
+                </div>
+                <div class="d-flex-col flex-center" style="height:70%">
+                    <input id="red-duration" class="input-number" type="number" value='5'/>
+                    <span>seconds</span>
+                </div>
+                <button id="red-control" class="btn btn-red round-border">Set</button>
+            </div>
+            <div id="yellow-led" class="mini-card">
+                <div class="round-transparent round-border flex-center bg-yellowish">
+                    <div class="round-bold round-border bg-yellow"></div>
+                </div>
+                <div class="d-flex-col flex-center" style="height:70%">
+                    <input id="yellow-duration" class="input-number" type="number" value='5'/>
+                    <span>seconds</span>
+                </div>
+                <button id="yellow-control" class="btn btn-yellow round-border">Set</button>
+            </div>
+            <div id="green-led" class="mini-card">
+                <div class="round-transparent round-border flex-center bg-greenish">
+                    <div class="round-bold round-border bg-green"></div>
+                </div>
+                <div class="d-flex-col flex-center" style="height:70%">
+                    <input id="green-duration" class="input-number" type="number" value='5'/>
+                    <span>seconds</span>
+                </div>
+                <button id="green-control" class="btn btn-green round-border">Set</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+    <script src="src/script.js"></script>
+</body>
+</html>
